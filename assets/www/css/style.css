@@ -1,0 +1,56 @@
+.x-tab {
+	min-width: 80px;
+}
+
+#loading-splash-logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.loading-splash  .x-mask-inner {
+	background-color: transparent;
+	padding: 0px;
+	z-index: 1000;
+}
+
+div.about {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	vertical-align: bottom;
+}
+
+div.about img {
+	width: 130px;
+	height: 150px;
+	margin: 10px;
+}
+
+.centered-cell {
+	text-align: center;
+}
+
+.touchgridpanel .x-list-item:nth-child(odd) {
+	background-color: #fff;
+}
+.x-title {
+    font-size: 16px;
+}
+.touchgridpanel .x-grid-header {
+    font-size: 16px;
+    height : 30px;
+}
+.touchgridpanel .x-grid-cell-hd {
+    font-weight: bold;
+}
+.touchgridpanel .x-grid-cell {
+   font-weight: bold;
+}
+.x-list-item-leaf{
+	display : block;
+	padding-left: 10px;
+	background: url("images/arrow_right.png") right no-repeat;
+}
