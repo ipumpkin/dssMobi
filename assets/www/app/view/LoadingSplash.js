@@ -4,9 +4,7 @@ Ext.define('Dss.view.LoadingSplash', {
 	config : {
 		cls : 'loading-splash',
 		message : Global.loadingText,
-	}
-});
-Ext.override(Dss.view.LoadingSplash, {
+	},
 	getTemplate : function() {
 		var prefix = Ext.baseCSSPrefix;
 

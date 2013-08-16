@@ -1,30 +1,25 @@
 Ext.define('Dss.store.Menu', {
-	extend : 'Ext.data.TreeStore',
-	xtype : 'menustore',
+	extend : 'Ext.data.Store',
+	xtype : 'menu',
 	requires : [
 	            'Dss.model.Menu'
 	         ],
 	config : {
 		model : 'Dss.model.Menu',
 		autoLoad : true,
-		storeId : 'menuStore',
+		storeId : 'menu',
 		remoteFilter : false,
 		proxy : {
 			type : 'jsonp',
 			url : Global.webHost + 'common!getPageResult.action',
 			callbackKey : 'callback',
 			extraParams : {
-				key : 'getMenu',
+				key : 'getMenuByParent',
 				'params["parent_id"]' : 0
 			},
 			reader : {
 				type : 'json',
 				rootProperty : 'data'
-			}
-		},
-		listeners :{
-			load : function(store,records,successful,opt,eopt){
-//				alert(records.length);
 			}
 		}
 	}

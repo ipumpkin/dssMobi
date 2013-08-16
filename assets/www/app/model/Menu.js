@@ -11,6 +11,18 @@ Ext.define('Dss.model.Menu', {
 			name : "MENU_PARENT",
 			type : "string"
 		}, {
+			name : "MENU_TYPE",
+			type : "string"
+		}, {
+			name : "PAGE_TYPE",
+			type : "string"
+		}, {
+			name : "PAGE_LAYOUT",
+			type : "string"
+		}, {
+			name : "MENU_DATA_ICON",
+			type : "string"
+		}, {
 			name : "REPORT_KEY",
 			type : "string"
 		}, {
@@ -26,7 +38,7 @@ Ext.define('Dss.model.Menu', {
 		idProperty : 'MENU_ID'
 	},
 	toUrl : function(){
-		return  'report/'+this.data.REPORT_DATE_TYPE.toLowerCase()+'/'+this.data.MENU_ID;
+		return  'menu/'+this.data.MENU_ID;
 	}
 	
 	

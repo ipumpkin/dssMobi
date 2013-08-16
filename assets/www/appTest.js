@@ -2,7 +2,7 @@ var Global = {
 	viewCache : [],
 	appTitle : '针对性营销',
 	loadingText : '正在加载...',
-	webHost : 'http://192.168.0.103:7001/dssMobileServer/',
+	webHost : 'http://192.168.1.108:7001/dssMobileServer/',
 	IMSI : '',
 	latn_id : '',
 	latn_name : '',
@@ -36,6 +36,7 @@ Ext.Loader.setConfig({
 Ext.application({
 	name : 'Dss',
 	models : ['Menu','Report'],
+	stores : ['List','Menu'],
 	controllers : ['MainTest'],
 	views : ['MainView','LoadingSplash'],
 	launch : function() {

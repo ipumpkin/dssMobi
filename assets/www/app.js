@@ -2,7 +2,7 @@ var Global = {
 	viewCache : [],
 	appTitle : '增值业务针对性营销',
 	loadingText : '正在加载...',
-	webHost : 'http://192.168.0.100:7001/dssMobileServer/',
+	webHost : 'http://192.168.1.108:7001/dssMobileServer/',
 	version : 'V1.0',
 	IMSI : '',
 	latn_id : '',
@@ -13,19 +13,11 @@ var Global = {
 	maxDayDate : parseInt(Ext.Date.format(new Date(),'Ym')),
 	curMonthDate : '',
 	maxMonthDate : '',
-	dayMenu : {
-		MENU_LABEL : '日报',
-		MENU_ID : 2,
-		expanded : true,
-		items : []
-	},
-	monthMenu : {
-		MENU_LABEL : '月报',
-		MENU_ID : 3,
-		expanded : true,
-		items : []
-	}
+	mainMenu : []
 };
+
+
+//----------------------------------------------
 Ext.Ajax.setDisableCaching(false);
 Ext.Loader.setConfig({
 	disableCaching: false,
@@ -38,6 +30,7 @@ Ext.Loader.setConfig({
 Ext.application({
 	name : 'Dss',
 	models : [ 'Menu', 'Report' ],
+	stores : ['List','Menu'],
 	controllers : [ 'Main' ],
 	views : [ 'MainView', 'LoadingSplash' ],
 	launch : function() {
